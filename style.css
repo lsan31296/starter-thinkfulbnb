@@ -7,8 +7,12 @@ body {
 h2 {
   font-size: 26px;
   font-weight: 400;
-  margin: 0 10px 10px 10px;
+  margin: 0 10px 20px 10px;
+  padding: 0 15%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 h3 {
@@ -31,23 +35,10 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
-}
-
-/* ---  Groups & Items --- */
-
-.group {
   display: flex;
   flex-direction: column;
-}
-
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 /* -------  Navigation ------- */
@@ -64,14 +55,25 @@ header {
   color: #fff;
 }
 
+header nav ul {
+  display: flex;
+  padding: 0 0 10px 0;
+  list-style: none;
+  justify-content: center;
+}
+
 header nav ul li {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+  
 }
 
 header nav ul li a:hover {
@@ -82,7 +84,12 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 15px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form label {
@@ -117,3 +124,65 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 600px) {
+  /* -------  Navigation ------- */
+
+  header {
+    display: flex;
+    flex-direction: row;
+    background-color: #ff385c;
+    padding: 10px 0 0 10px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  form {
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    justify-content: space-between;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px ;
+  }
+
+  form button {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+  }
+
+  .alternate-background .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .alternate-background .item {
+    flex: 1;
+    padding: 0 10px;
+  }
+  .alternate-background .item-double {
+    flex: 2;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+  .background .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 2px red;
+  }
+  .background .item {
+    flex: 1;
+    border: solid 2px black;
+  }
+
+}
