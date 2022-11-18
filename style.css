@@ -154,7 +154,7 @@ footer p {
   form button {
     display: flex;
     justify-content: center;
-    width: 150px;
+    width: 15%;
   }
 
   .alternate-background .group {
@@ -170,19 +170,32 @@ footer p {
     flex: 2;
   }
 
-  img {
-    width: 100%;
-  }
+  .background {
+    display: flex;
+    flex-direction: column;
   
+  }
+
   .background .group {
+    /*border: solid 2px black;*/
     display: flex;
     flex-direction: row;
-    align-items: center;
-    border: solid 2px red;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+
   .background .item {
-    flex: 1;
-    border: solid 2px black;
+    width: 49%;
+    height: 49%;
   }
+
+  .group-image {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  
 
 }
