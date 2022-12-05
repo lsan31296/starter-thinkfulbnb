@@ -149,12 +149,17 @@ footer p {
     display: flex;
     flex-direction: column;
     padding-left: 10px ;
+    width: 20%;
+  }
+
+  form select, form input {
+    width: 100%;
   }
 
   form button {
     display: flex;
     justify-content: center;
-    width: 15%;
+    width: 20%;
   }
 
   .alternate-background .group {
